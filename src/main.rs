@@ -1,6 +1,8 @@
 //! This is a static site builder for this game, mainly focusing on being a simple
 //! javascript bundler.
 
+mod root;
+
 use std::{error::Error, fs};
 
 pub const OUTPUT_DIR: &str = "deploy";
@@ -12,6 +14,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     _ = fs::create_dir(OUTPUT_DIR);
 
     // do build work here :)
+    root::run()?;
 
     Ok(())
 }
