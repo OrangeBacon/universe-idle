@@ -21,9 +21,8 @@ pub fn run() -> Result<(), Box<dyn Error>> {
     eprintln!("Took {:?}", now.elapsed());
 
     let now = Instant::now();
-    eprintln!("Running bundler...");
     bundle(BUNDLE_ROOT)?;
-    eprintln!("Took {:?}", now.elapsed());
+    eprintln!("JS bundled in {:?}", now.elapsed());
 
     Ok(())
 }

@@ -5,7 +5,9 @@ Idle/Incremental game
 ```sh
 cargo run
 ```
-This is only currently tested on linux systems.
+This is only currently tested on linux systems.  The build depends on typescript
+being available in the path as `npx tsc`, `npm install` will get the right version
+for you.
 
 # Deploy
 Ensure that the following is run once you have cloned this repository, before

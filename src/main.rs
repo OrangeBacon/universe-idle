@@ -1,6 +1,7 @@
 //! This is a static site builder for this game, mainly focusing on being a simple
 //! javascript bundler.
 
+mod css;
 mod js;
 mod root;
 
@@ -18,6 +19,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // do build work here :)
     root::run()?;
     js::run()?;
+    css::run()?;
 
     eprintln!("Finished in {:?}", now.elapsed());
 
