@@ -1,13 +1,15 @@
 //! This is a static site builder for this game, mainly focusing on being a simple
 //! javascript bundler.
 
+mod js;
 mod root;
 
-use std::{error::Error, fs};
+use std::{error::Error, fs, time::Instant};
 
 pub const OUTPUT_DIR: &str = "deploy";
 
 fn main() -> Result<(), Box<dyn Error>> {
+    let now = Instant::now();
     remove_old()?;
 
     // create the new output directory, if already exists ignore the error
@@ -15,6 +17,9 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // do build work here :)
     root::run()?;
+    js::run()?;
+
+    eprintln!("Finished in {:?}", now.elapsed());
 
     Ok(())
 }
