@@ -1,4 +1,4 @@
-import { StartPane } from "front-end/start-pane";
+import { StartPane } from "./start-pane";
 
 // Interface for managing the rendering of the application.
 export class Frontend {

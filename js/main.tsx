@@ -1,5 +1,5 @@
-import { Backend } from "back-end/back-end";
-import { Frontend } from "front-end/front-end";
+import { Backend } from "./back-end/back-end";
+import { Frontend } from "./front-end/front-end";
 
 const root = document.getElementById("app")!;
 const front_end = new Frontend(root);
