@@ -14,6 +14,8 @@ pub fn run() -> Result<(), Box<dyn Error>> {
     let now = Instant::now();
     eprintln!("Running tsc...");
 
+    fs::remove_dir_all("target/ts")?;
+
     let status = Command::new("npx").arg("tsc").status()?;
     if !status.success() {
         return Err("tsc failed".into());
