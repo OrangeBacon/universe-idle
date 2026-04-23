@@ -14,4 +14,5 @@ building the project:
 git worktree add deploy gh-pages
 ```
 
-Then, to deploy, run `deploy.sh`.  (Will need to be made executable with `chmod`)
+Then, to deploy, commit and push from inside the work tree.  Make sure you run the
+build command first!
